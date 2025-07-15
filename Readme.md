@@ -1,4 +1,4 @@
-# 日本の気温マップ iOS アプリ 🌡️📱
+# Japan-Temperature_Mobile 🌡️📱
 
 日本の各地方の気温情報をインタラクティブに表示する iOS アプリケーションです。SwiftUI で開発されており、美しい UI と直感的な操作性を提供します。
 
@@ -78,7 +78,7 @@
 ### コアファイル構成
 
 ```
-TemperatureMapApp.swift
+Japan-Temperature_Mobile.swift
 ├── データモデル
 │   ├── RegionData: 地方データの構造体
 │   └── TemperatureStats: 統計情報の構造体
@@ -257,13 +257,11 @@ struct TemperatureMapApp: App {
 
 ### 対応 OS
 
-- **iOS 14.0 以降**
-- **iPadOS 14.0 以降**
+- **iOS 18.5**
 
 ### 対応デバイス
 
-- **iPhone**: SE (第 2 世代) 〜 iPhone 15 Pro Max
-- **iPad**: iPad (第 8 世代) 〜 iPad Pro (第 6 世代)
+- **iPhone**: iPhone 16 Pro Max
 
 ### パフォーマンス
 
@@ -291,3 +289,5 @@ struct TemperatureMapApp: App {
 ---
 
 **作成日**: 2025 年 7 月
+**最終更新**: 2025 年 7 月
+**開発環境**: Xcode 16.4, iOS 18.5

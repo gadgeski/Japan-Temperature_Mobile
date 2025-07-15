@@ -7,12 +7,11 @@
 
 import SwiftUI
 
-struct JapanTemperatureMobileApp: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+@main
+struct JapanTemperatureMobileApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
     }
-}
-
-#Preview {
-    JapanTemperatureMobileApp()
 }

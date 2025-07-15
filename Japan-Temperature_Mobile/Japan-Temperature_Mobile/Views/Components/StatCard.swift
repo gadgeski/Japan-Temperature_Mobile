@@ -8,11 +8,28 @@
 import SwiftUI
 
 struct StatCard: View {
+    let value: String
+    let label: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(spacing: 8) {
+            Text(value)
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundColor(Color(red: 0.30, green: 0.69, blue: 0.31))
+            
+            Text(label)
+                .font(.caption)
+                .foregroundColor(.secondary)
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, 15)
+        .background(Color(UIColor.systemGray6))
+        .cornerRadius(10)
     }
 }
 
 #Preview {
-    StatCard()
+    StatCard(value: "28℃", label: "平均気温")
+        .frame(width: 120)
 }

@@ -5,14 +5,20 @@
 //  Created by Dev Tech on 2025/07/14.
 //
 
-import SwiftUI
+import Foundation
 
-struct Constants: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct AppConstants {
+    static let regionOrder = ["北海道", "東北", "関東", "中部", "関西", "中国", "四国", "九州", "沖縄"]
+    
+    struct TemperatureThresholds {
+        static let cool = 20
+        static let warm = 28
+        static let hot = 35
     }
-}
-
-#Preview {
-    Constants()
+    
+    struct UI {
+        static let cornerRadius: CGFloat = 15
+        static let cardPadding: CGFloat = 15
+        static let standardSpacing: CGFloat = 20
+    }
 }

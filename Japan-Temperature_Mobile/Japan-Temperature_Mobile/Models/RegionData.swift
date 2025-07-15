@@ -5,14 +5,27 @@
 //  Created by Dev Tech on 2025/07/14.
 //
 
-import SwiftUI
+import Foundation
 
-struct RegionData: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+// MARK: - データモデル
+struct RegionData {
+    let name: String
+    let temps: [Int]
+    let comments: [String]
+    var currentTemp: Int
+    var currentComment: String
+    
+    init(name: String, temps: [Int], comments: [String]) {
+        self.name = name
+        self.temps = temps
+        self.comments = comments
+        self.currentTemp = temps.randomElement() ?? 20
+        self.currentComment = comments.randomElement() ?? ""
+    }
+    
+    mutating func updateTemperature() {
+        self.currentTemp = temps.randomElement() ?? 20
+        self.currentComment = comments.randomElement() ?? ""
     }
 }
 
-#Preview {
-    RegionData()
-}

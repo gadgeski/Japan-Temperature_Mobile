@@ -16,6 +16,21 @@
 			path = "Japan-Temperature_Mobile";
 			sourceTree = "<group>";
 		};
+		DB418C1F2E2488F600E6CBAB /* ViewModels */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DB418C2A2E248A9700E6CBAB /* Utils */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		DB418C302E24B72800E6CBAB /* Resources */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +49,9 @@
 			children = (
 				DB418C082E24871500E6CBAB /* Japan-Temperature_Mobile */,
 				DB418C072E24871500E6CBAB /* Products */,
+				DB418C1F2E2488F600E6CBAB /* ViewModels */,
+				DB418C302E24B72800E6CBAB /* Resources */,
+				DB418C2A2E248A9700E6CBAB /* Utils */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +80,9 @@
 			);
 			fileSystemSynchronizedGroups = (
 				DB418C082E24871500E6CBAB /* Japan-Temperature_Mobile */,
+				DB418C1F2E2488F600E6CBAB /* ViewModels */,
+				DB418C2A2E248A9700E6CBAB /* Utils */,
+				DB418C302E24B72800E6CBAB /* Resources */,
 			);
 			name = "Japan-Temperature_Mobile";
 			packageProductDependencies = (
