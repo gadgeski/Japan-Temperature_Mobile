@@ -6,12 +6,22 @@
 //
 
 import SwiftUI
+import Charts
 
 struct RegionDetailView: View {
     let region: RegionData
+    @State private var showGraph = false
+    @StateObject private var weatherViewModel = WeatherViewModel()
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
+            Button("過去の気温グラフを表示") {
+                showGraph.toggle()
+            }
+            .padding()
+            .sheet(isPresented: $showGraph) {
+                GraphView(viewModel: weatherViewModel, selectedRegion: region.name)
+            }
             // ヘッダー
             HStack {
                 Text("\(region.statusEmoji) \(region.name)地方")
