@@ -31,6 +31,11 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		DBCD71522E488C1700993BDC /* PreviewContent */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PreviewContent;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +57,7 @@
 				DB418C1F2E2488F600E6CBAB /* ViewModels */,
 				DB418C302E24B72800E6CBAB /* Resources */,
 				DB418C2A2E248A9700E6CBAB /* Utils */,
+				DBCD71522E488C1700993BDC /* PreviewContent */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +89,7 @@
 				DB418C1F2E2488F600E6CBAB /* ViewModels */,
 				DB418C2A2E248A9700E6CBAB /* Utils */,
 				DB418C302E24B72800E6CBAB /* Resources */,
+				DBCD71522E488C1700993BDC /* PreviewContent */,
 			);
 			name = "Japan-Temperature_Mobile";
 			packageProductDependencies = (
