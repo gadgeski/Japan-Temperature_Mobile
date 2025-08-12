@@ -2,23 +2,28 @@ import Foundation
 import Combine
 
 class WeatherViewModel: ObservableObject {
-    // 他のプロパティとメソッド...
-
-    @Published var historicalData: [HistoricalTemperature] = []
-
-    func fetchHistoricalData(for region: String) {
-        // ここで実際のAPIから過去データを取得するロジックを実装します。
-        // 以下はデモ用のデータ生成例です。
-        let calendar = Calendar.current
-        let today = Date()
-        var demoData: [HistoricalTemperature] = []
-
-        for i in 0..<30 {
-            if let date = calendar.date(byAdding: .day, value: -i, to: today) {
-                let randomTemp = Double.random(in: 15.0...30.0)
-                demoData.append(HistoricalTemperature(date: date, temperature: randomTemp))
-            }
+    @Published var weatherDescription: String = ""
+    @Published var temperature: String = ""
+    
+    private var cancellables = Set<AnyCancellable>()
+    
+    func fetchWeather(for city: String) {
+        // .env ファイルから API キーを取得
+        guard let apiKey = ProcessInfo.processInfo.environment["API_KEY"] else {
+            fatalError("API_KEYが設定されていません")
         }
-        self.historicalData = demoData.sorted { $0.date < $1.date }
+
+        let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(city)&appid=\(apiKey)&units=metric&lang=ja")!
+        
+        URLSession.shared.dataTaskPublisher(for: url)
+            .map { $0.data }
+            .decode(type: WeatherData.self, decoder: JSONDecoder())
+            .replaceError(with: WeatherData(main: Main(temp: 0), weather: [Weather(description: "情報取得失敗")]))
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] weatherData in
+                self?.weatherDescription = weatherData.weather.first?.description ?? "情報取得失敗"
+                self?.temperature = "\(weatherData.main.temp)℃"
+            }
+            .store(in: &cancellables)
     }
 }
