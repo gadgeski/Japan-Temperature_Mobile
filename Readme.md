@@ -138,15 +138,6 @@ echo "API_KEY=your_openweathermap_api_key" > .env
 - Xcode で `Cmd + R` でビルド・実行
 - シミュレーター または 実機で動作確認
 
-## 📱 対応プラットフォーム
-
-| プラットフォーム | 最小バージョン | 状態        |
-| ---------------- | -------------- | ----------- |
-| iPhone           | iOS 18.5+      | ✅ フル対応 |
-| iPad             | iPadOS 18.5+   | ✅ フル対応 |
-| Mac (Catalyst)   | macOS 15.5+    | ✅ 対応     |
-| Apple Vision Pro | visionOS 2.5+  | ✅ 対応     |
-
 ## 🎨 UI 設計思想
 
 ### デザインガイドライン
