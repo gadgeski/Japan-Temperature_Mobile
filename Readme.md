@@ -147,20 +147,6 @@ echo "API_KEY=your_openweathermap_api_key" > .env
 | Mac (Catalyst)   | macOS 15.5+    | ✅ 対応     |
 | Apple Vision Pro | visionOS 2.5+  | ✅ 対応     |
 
-## 🔧 主な設定
-
-### ビルド設定
-
-- **Bundle ID**: `com.gmail.d3rvi2lg1ont69d.Japan-Temperature-Mobile`
-- **Deployment Target**: iOS 18.5, macOS 15.5, visionOS 2.5
-- **Swift Version**: 5.0
-- **App Groups**: 有効
-
-### アプリ権限
-
-- **Sandbox**: 有効
-- **User Selected Files (Read Only)**: 有効
-
 ## 🎨 UI 設計思想
 
 ### デザインガイドライン
